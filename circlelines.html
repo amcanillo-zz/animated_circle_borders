@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Circle Lines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            letter-spacing:0.1em;
+        }
+        body{
+            min-height:100vh;
+            background:#000;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .showcase{
+            position:relative;
+            width:500px;
+            height:550px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .showcase span:nth-child(1){
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:2px solid #fff;
+            border-radius: 48% 72% 43% 37% / 41% 44% 56% 59%;
+            transition:0.5s;
+            animation: animate 6s linear infinite;
+        }
+        .showcase span:nth-child(2){
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:2px solid #fff;
+            border-radius: 39% 72% 43% 37% / 44% 64% 56% 49%;
+            transition:0.5s;
+            animation: animate 4s linear infinite;
+        }
+        .showcase span:nth-child(3){
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:2px solid #fff;
+            border-radius: 35% 62% 53% 47% / 31% 44% 54% 56%;
+            transition:0.5s;
+            animation: reverse 8s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes reverse{
+            0%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform:rotate(0deg);
+            }
+        }
+        .content{
+            position:relative;
+            padding:40px 60px;
+            text-align:center;
+            transition: 0.5s;
+            z-index: 1000;
+            color:#fff;
+        }
+        .content img{
+            width:80%;
+            padding: 10px;
+            border-radius:50%;
+        }
+        .content h2{
+            padding:20px 10px 10px 10px;
+            font-size:20px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .content p{
+            font-size:12px;
+        }
+        .content a{
+            color:#fff;
+            text-decoration:none;
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="content">
+            <img src="shoes.png" alt="ring">
+            <h2>Kicks Max 0.3</h2>
+            <p>Men's <br>White High-Tops<br>A time-tested silhouette gets one of Vitos&copy;'s newest <br>cushioning technologies with the <a href="#">Kicks Max 0.3</a>. <br>The cushioning unit absorbs every step of this <br>lifestyle-oriented sneaker.</p>
+            <br>
+            <a href="#" class="button">Add to Cart</a>
+        </div> 
+    </div>
+</body>
+</html>
